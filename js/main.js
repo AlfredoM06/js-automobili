@@ -59,3 +59,28 @@ let carList = [
     }
 ];
 
+
+// creo 3 array separati per ogni tipo di carburante delle macchine
+let carListGasoline = [];
+let carListDiesel = [];
+let carListEcologic = [];
+
+
+// faccio si che le macchine vengono divise nell'array giusto
+
+carList.forEach(function(car) {
+    if (car.fuel == "Benzina") {
+        carListGasoline.push(car);
+    } else if (car.fuel == "Diesel") {
+        carListDiesel.push(car);
+    } else {
+        carListEcologic.push(car);
+    }
+
+});
+
+
+//stampo i 3 array nella console 
+console.log(carListGasoline);
+console.log(carListDiesel);
+console.log(carListEcologic);
